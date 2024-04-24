@@ -1,0 +1,110 @@
+﻿@model Org.Ktu.Isk.P175B602.Autonuoma.Models.Automobilis.AutomobilisCE
+
+@* this will also be used as page title in main layout *@
+@{ ViewData["title"] = "Automobilio redagavimas"; }
+
+@* content header *@
+<div class="main-content-header">
+	<span class="title">@ViewData["title"]</span>
+	<span class="actions">
+		<a 
+			href="@Url.Action("Index")" 
+			class="btn btn-outline-primary btn-sm"
+		>
+			<i class="fa-solid fa-angles-left"></i> Atgal į sarašą
+		</a>
+	</span>
+</div>
+
+@* content itself *@
+<div class="main-content-ced">
+@using( Html.BeginForm(FormMethod.Post, new { @class="entity-ce" }) )
+{
+	@Html.AntiForgeryToken()
+	
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+	
+	@* add hidden form fields for non-visible properties, otherwise they will get lost in code that handles button presses *@
+	@Html.HiddenFor(m => m.Automobilis.Vin)
+
+	<fieldset>
+		<div class="form-group">
+			@Html.LabelFor(m => m.Automobilis.Vin)
+			@Html.EditorFor(m => m.Automobilis.Vin)
+			@Html.ValidationMessageFor(m => m.Automobilis.Vin, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Automobilis.ValstybinisNr)
+			@Html.EditorFor(m => m.Automobilis.ValstybinisNr)
+			@Html.ValidationMessageFor(m => m.Automobilis.ValstybinisNr, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Automobilis.FkModelis)
+			@Html.DropDownListFor(m => m.Automobilis.FkModelis, Model.Lists.Modeliai, (string)ViewData["none-chosen"])
+			@Html.ValidationMessageFor(m => m.Automobilis.FkModelis, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Automobilis.PirmRegMetai)
+			@Html.EditorFor(m => m.Automobilis.PirmRegMetai)
+			@Html.ValidationMessageFor(m => m.Automobilis.PirmRegMetai, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Automobilis.KebuloTipas)
+			@Html.DropDownListFor(m => m.Automobilis.KebuloTipas, Model.Lists.KebuloTipai, (string)ViewData["none-chosen"])
+			@Html.ValidationMessageFor(m => m.Automobilis.KebuloTipas, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Automobilis.Variklis)
+			@Html.EditorFor(m => m.Automobilis.Variklis)
+			@Html.ValidationMessageFor(m => m.Automobilis.Variklis, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Automobilis.Galia)
+			@Html.EditorFor(m => m.Automobilis.Galia)
+			@Html.ValidationMessageFor(m => m.Automobilis.Galia, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Automobilis.Spalva)
+			@Html.EditorFor(m => m.Automobilis.Spalva)
+			@Html.ValidationMessageFor(m => m.Automobilis.Spalva, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Automobilis.PavaruDeze)
+			@Html.DropDownListFor(m => m.Automobilis.PavaruDeze, Model.Lists.PavaruDezes, (string)ViewData["none-chosen"])
+			@Html.ValidationMessageFor(m => m.Automobilis.PavaruDeze, "")
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Automobilis.DegaluTipas)
+			@Html.DropDownListFor(m => m.Automobilis.DegaluTipas, Model.Lists.DegaluTipai, (string)ViewData["none-chosen"])
+			@Html.ValidationMessageFor(m => m.Automobilis.DegaluTipas, "")
+		</div>
+
+	</fieldset>
+
+	<div class="container-fluid d-flex d-row justify-content-end">
+		<button name="save" value="1" class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Išsaugoti</button>
+	</div>
+}
+</div>
+
+@* content footer *@
+<div class="main-content-footer">
+	<span class="title"></span>
+	<span class="actions">
+		<a 
+			href="@Url.Action("Index")" 
+			class="btn btn-outline-primary btn-sm"
+		>
+			<i class="fa-solid fa-angles-left"></i> Atgal į sarašą
+		</a>
+	</span>
+</div>

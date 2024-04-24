@@ -1,0 +1,271 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\DBLAB2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\views\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\views\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\sql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\wwwroot\\deps\\webpack.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\wwwroot\\deps\\webpack.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\wwwroot\\deps-manual\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\wwwroot\\deps-manual\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\wwwroot\\deps-manual\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\wwwroot\\deps-manual\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\autonuoma.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\autonuoma.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\wwwroot\\favicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\wwwroot\\favicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|c:\\users\\admin\\desktop\\dblab2\\autonuoma\\autonuoma.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{E068C55C-3A1A-45E5-8DFB-5CA04EEE4F76}|Autonuoma\\Autonuoma.csproj|solutionrelative:autonuoma\\autonuoma.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\5765f971d433e94d70e498edb324b1e0a496c522\\Views_Automobilis_Create_cshtml.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Views\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Autonuoma\\Views\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Views\\_Layout.cshtml",
+              "RelativeToolTip": "Autonuoma\\Views\\_Layout.cshtml",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAIgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-19T22:47:44.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Autonuoma\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Autonuoma\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-19T22:47:42.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Autonuoma\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Autonuoma\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-19T22:47:41.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\.gitignore",
+              "RelativeDocumentMoniker": "Autonuoma\\.gitignore",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\.gitignore",
+              "RelativeToolTip": "Autonuoma\\.gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-04-19T21:33:49.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "webpack.config.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\wwwroot\\deps\\webpack.config.js",
+              "RelativeDocumentMoniker": "Autonuoma\\wwwroot\\deps\\webpack.config.js",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\wwwroot\\deps\\webpack.config.js",
+              "RelativeToolTip": "Autonuoma\\wwwroot\\deps\\webpack.config.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-19T21:33:32.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\wwwroot\\deps-manual\\style.css",
+              "RelativeDocumentMoniker": "Autonuoma\\wwwroot\\deps-manual\\style.css",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\wwwroot\\deps-manual\\style.css",
+              "RelativeToolTip": "Autonuoma\\wwwroot\\deps-manual\\style.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-19T21:33:29.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\wwwroot\\deps-manual\\index.js",
+              "RelativeDocumentMoniker": "Autonuoma\\wwwroot\\deps-manual\\index.js",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\wwwroot\\deps-manual\\index.js",
+              "RelativeToolTip": "Autonuoma\\wwwroot\\deps-manual\\index.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-19T21:33:27.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "favicon.ico - Icon [32x32, 32 bit, BMP]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\wwwroot\\favicon.ico",
+              "RelativeDocumentMoniker": "Autonuoma\\wwwroot\\favicon.ico",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\wwwroot\\favicon.ico - Icon [32x32, 32 bit, BMP]",
+              "RelativeToolTip": "Autonuoma\\wwwroot\\favicon.ico - Icon [32x32, 32 bit, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2024-04-19T21:32:17.498Z",
+              "EditorCaption": " - Icon [32x32, 32 bit, BMP]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Autonuoma.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Autonuoma.csproj",
+              "RelativeDocumentMoniker": "Autonuoma\\Autonuoma.csproj",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Autonuoma.csproj",
+              "RelativeToolTip": "Autonuoma\\Autonuoma.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-19T21:04:39.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Autonuoma",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Autonuoma.csproj",
+              "RelativeDocumentMoniker": "Autonuoma\\Autonuoma.csproj",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Autonuoma.csproj",
+              "RelativeToolTip": "Autonuoma\\Autonuoma.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-19T21:04:18.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Sql.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Sql.cs",
+              "RelativeDocumentMoniker": "Autonuoma\\Sql.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Sql.cs",
+              "RelativeToolTip": "Autonuoma\\Sql.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T21:02:15.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Program.cs",
+              "RelativeDocumentMoniker": "Autonuoma\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Program.cs",
+              "RelativeToolTip": "Autonuoma\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T21:03:47.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Config.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Config.cs",
+              "RelativeDocumentMoniker": "Autonuoma\\Config.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\Config.cs",
+              "RelativeToolTip": "Autonuoma\\Config.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T21:03:46.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\appsettings.json",
+              "RelativeDocumentMoniker": "Autonuoma\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DBLAB2\\Autonuoma\\appsettings.json",
+              "RelativeToolTip": "Autonuoma\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-19T20:41:09.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Views_Automobilis_Create_cshtml.g.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\5765f971d433e94d70e498edb324b1e0a496c522\\Views_Automobilis_Create_cshtml.g.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\5765f971d433e94d70e498edb324b1e0a496c522\\Views_Automobilis_Create_cshtml.g.cs",
+              "ToolTip": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\5765f971d433e94d70e498edb324b1e0a496c522\\Views_Automobilis_Create_cshtml.g.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\5765f971d433e94d70e498edb324b1e0a496c522\\Views_Automobilis_Create_cshtml.g.cs [Read Only]",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T20:56:29.505Z",
+              "EditorCaption": " [Read Only]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
