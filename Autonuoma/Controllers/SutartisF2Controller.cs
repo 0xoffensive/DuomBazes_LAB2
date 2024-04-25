@@ -160,22 +160,30 @@ public class SutartisF2Controller : Controller
 		//save of the form data was requested?
 		if( save != null )
 		{
-			List<SutartisCE.PrirasytasMech> mechanik = new List<SutartisCE.PrirasytasMech>();
-			foreach (var item in sutCE.PriklausantysMechanikai)
+			for( var i = 0; i < sutCE.PriklausantysMechanikai.Count-1; i ++ )
 			{
-				if (mechanik.Any(x => x.Mechanikas == item.Mechanikas))
-					ModelState.AddModelError($"item.Mechanikas", "Mechaniko dublikatas.");
+				var refUp = sutCE.PriklausantysMechanikai[i];
 
-				mechanik.Add(item);
+				for( var j = i+1; j < sutCE.PriklausantysMechanikai.Count; j++ )
+				{
+					var testUp = sutCE.PriklausantysMechanikai[j];
+					
+					if( testUp.Mechanikas == refUp.Mechanikas )
+						ModelState.AddModelError($"PriklausantysMechanikai[{j}].Mechanikas", "Mechaniko dublikatas.");
+				}
 			}
 
-			List<SutartisCE.Gedimas> gedimai = new List<SutartisCE.Gedimas>();
-			foreach (var item in sutCE.Gedimai)
+			for( var i = 0; i < sutCE.Gedimai.Count-1; i ++ )
 			{
-				if (gedimai.Any(x => x.GedimoId == item.GedimoId))
-					ModelState.AddModelError($"item.GedimoId", "Gedimo dublikatas.");
+				var refUp = sutCE.Gedimai[i];
 
-				gedimai.Add(item);
+				for( var j = i+1; j < sutCE.Gedimai.Count; j++ )
+				{
+					var testUp = sutCE.Gedimai[j];
+					
+					if( testUp.GedimoId == refUp.GedimoId )
+						ModelState.AddModelError($"Gedimai[{j}].GedimoId", "Gedimo dublikatas.");
+				}
 			}
 
 			// ?!?! ar tikrinti?
@@ -357,22 +365,30 @@ public class SutartisF2Controller : Controller
 		if( save != null )
 		{
 			// tikrina mechanikus
-			List<SutartisCE.PrirasytasMech> mechanik = new List<SutartisCE.PrirasytasMech>();
-			foreach (var item in sutCE.PriklausantysMechanikai)
+			for( var i = 0; i < sutCE.PriklausantysMechanikai.Count-1; i ++ )
 			{
-				if (mechanik.Any(x => x.Mechanikas == item.Mechanikas))
-					ModelState.AddModelError($"item.Mechanikas", "Mechaniko dublikatas.");
+				var refUp = sutCE.PriklausantysMechanikai[i];
 
-				mechanik.Add(item);
+				for( var j = i+1; j < sutCE.PriklausantysMechanikai.Count; j++ )
+				{
+					var testUp = sutCE.PriklausantysMechanikai[j];
+					
+					if( testUp.Mechanikas == refUp.Mechanikas )
+						ModelState.AddModelError($"PriklausantysMechanikas[{j}].Mechanikai", "Mechaniko dublikatas.");
+				}
 			}
-			// tikrina gedimus
-			List<SutartisCE.Gedimas> gedimai = new List<SutartisCE.Gedimas>();
-			foreach (var item in sutCE.Gedimai)
-			{
-				if (gedimai.Any(x => x.GedimoId == item.GedimoId))
-					ModelState.AddModelError($"item.GedimoId", "Gedimo dublikatas.");
 
-				gedimai.Add(item);
+			for( var i = 0; i < sutCE.Gedimai.Count-1; i ++ )
+			{
+				var refUp = sutCE.Gedimai[i];
+
+				for( var j = i+1; j < sutCE.Gedimai.Count; j++ )
+				{
+					var testUp = sutCE.Gedimai[j];
+					
+					if( testUp.GedimoId == refUp.GedimoId )
+						ModelState.AddModelError($"Gedimai[{j}].GedimoId", "Gedimo dublikatas.");
+				}
 			}
 
 			//form field validation passed?
@@ -443,7 +459,12 @@ public class SutartisF2Controller : Controller
 		if( sutCE.Sutartis.Busena == "priimtas laukia eileje" || sutCE.Sutartis.Busena == "atsiskaityta" )
 		{
 			//delete the entity
-			//SutartisF2Repo.DeleteUzsakytaPaslaugaForSutartis(id);
+			SutartisF2Repo.DeleteAptarnauja(sutCE.Sutartis.Nr);
+			SutartisF2Repo.DeleteTuriGedima(sutCE.Sutartis.Nr);
+			// Detales lentele
+			SutartisF2Repo.DeleteDetalesKiekis(sutCE.Sutartis.Nr);
+			SutartisF2Repo.DeleteAtliktasDarbas(sutCE.Sutartis.Nr);
+
 			SutartisF2Repo.DeleteSutartis(id);
 
 			//redired to list form
@@ -469,7 +490,9 @@ public class SutartisF2Controller : Controller
 		var ListBusenos = new List<string>{
 			"remontuojamas",
 			"suremontuotas",
-			"priimtas laukia eileje"
+			"priimtas laukia eileje",
+			"atsaukta",
+			"atsiskaityta"
 		};
 		// From SQL tables
 		var automobiliai = AutomobilisRepo.ListAutomobilis();
