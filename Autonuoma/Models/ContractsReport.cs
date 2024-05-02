@@ -23,7 +23,7 @@ public class Sutartis
 	public string AsmensKodas { get; set; }
 
 	[DisplayName("Sudarytų sutarčių vertė")]
-	public decimal Kaina { get; set; }
+	public decimal? Kaina { get; set; }
 
 	[DisplayName("Užsakytų paslaugų vertė")]
 	public decimal PaslauguKaina { get; set; }

@@ -87,49 +87,44 @@ public class AtaskaitaRepo
 		var query =
 			$@"SELECT
 				sut.nr,
-				sut.sutarties_data,
+				sut.automobilio_priemimo_data,
 				kln.vardas,
 				kln.pavarde,
 				kln.asmens_kodas,
-				sut.kaina,
-				IFNULL(SUM(up.kaina*up.kiekis), 0) paslaugu_kaina,
-				bs1.bendra_suma,
-				bs2.bendra_suma bendra_suma_paslaugu
+				sut.remonto_kaina,
+				bs1.bendra_suma
 			FROM
-				`{Config.TblPrefix}sutartys` sut
-				INNER JOIN `{Config.TblPrefix}klientai` kln ON kln.asmens_kodas = sut.fk_klientas
-				LEFT JOIN `{Config.TblPrefix}uzsakytos_paslaugos` up ON up.fk_sutartis = sut.nr
+				`remonto_sutartis` sut
+				INNER JOIN `klientas` kln ON kln.asmens_kodas = sut.fk_KLIENTASasmens_kodas
 				LEFT JOIN
 					(
 						SELECT
 							kln1.asmens_kodas,
-							sum(sut1.kaina) as bendra_suma
-						FROM `{Config.TblPrefix}sutartys` sut1, `{Config.TblPrefix}klientai` kln1
+							sum(sut1.remonto_kaina) as bendra_suma
+						FROM `remonto_sutartis` sut1, `klientas` kln1
 						WHERE
-							kln1.asmens_kodas=sut1.fk_klientas
-							AND sut1.sutarties_data >= IFNULL(?nuo, sut1.sutarties_data)
-							AND sut1.sutarties_data <= IFNULL(?iki, sut1.sutarties_data)
+							kln1.asmens_kodas=sut1.fk_KLIENTASasmens_kodas
+							AND sut1.automobilio_priemimo_data >= IFNULL(?nuo, sut1.automobilio_priemimo_data)
+							AND sut1.automobilio_priemimo_data <= IFNULL(?iki, sut1.automobilio_priemimo_data)
 							GROUP BY kln1.asmens_kodas
 					) AS bs1
 					ON bs1.asmens_kodas = kln.asmens_kodas
 				LEFT JOIN
 					(
 						SELECT
-							kln2.asmens_kodas,
-							IFNULL(SUM(up2.kiekis*up2.kaina), 0) as bendra_suma
+							kln2.asmens_kodas
 						FROM
-							`{Config.TblPrefix}sutartys` sut2
-							INNER JOIN `{Config.TblPrefix}klientai` kln2 ON kln2.asmens_kodas = sut2.fk_klientas
-							LEFT JOIN `{Config.TblPrefix}uzsakytos_paslaugos` up2 ON up2.fk_sutartis = sut2.nr
+							`remonto_sutartis` sut2
+							INNER JOIN `klientas` kln2 ON kln2.asmens_kodas = sut2.fk_KLIENTASasmens_kodas
 						WHERE
-							sut2.sutarties_data >= IFNULL(?nuo, sut2.sutarties_data)
-							AND sut2.sutarties_data <= IFNULL(?iki, sut2.sutarties_data)
+							sut2.automobilio_priemimo_data >= IFNULL(?nuo, sut2.automobilio_priemimo_data)
+							AND sut2.automobilio_priemimo_data <= IFNULL(?iki, sut2.automobilio_priemimo_data)
 						GROUP BY kln2.asmens_kodas
 					) AS bs2
 					ON bs2.asmens_kodas = kln.asmens_kodas
 			WHERE
-				sut.sutarties_data >= IFNULL(?nuo, sut.sutarties_data)
-				AND sut.sutarties_data <= IFNULL(?iki, sut.sutarties_data)
+				sut.automobilio_priemimo_data >= IFNULL(?nuo, sut.automobilio_priemimo_data)
+				AND sut.automobilio_priemimo_data <= IFNULL(?iki, sut.automobilio_priemimo_data)
 			GROUP BY 
 				sut.nr, kln.asmens_kodas
 			ORDER BY 
@@ -144,25 +139,24 @@ public class AtaskaitaRepo
 		var result = 
 			Sql.MapAll<ContractsReport.Sutartis>(drc, (dre, t) => {
 				t.Nr = dre.From<int>("nr");
-				t.SutartiesData = dre.From<DateTime>("sutarties_data");
+				t.SutartiesData = dre.From<DateTime>("automobilio_priemimo_data");
 				t.AsmensKodas = dre.From<string>("asmens_kodas");
 				t.Vardas = dre.From<string>("vardas");
 				t.Pavarde = dre.From<string>("pavarde");
-				t.Kaina = dre.From<decimal>("kaina");
-				t.PaslauguKaina = dre.From<decimal>("paslaugu_kaina");
-				t.BendraSuma = dre.From<decimal>("bendra_suma");
-				t.BendraSumaPaslaug = dre.From<decimal>("bendra_suma_paslaugu");
+				t.Kaina = dre.From<decimal?>("remonto_kaina");
+				//t.BendraSuma = dre.From<decimal>("bendra_suma");
+				//t.BendraSumaPaslaug = dre.From<decimal>("bendra_suma_paslaugu");
 			});
 
 		return result;
 	}
 
-	public static List<LateContractsReport.Sutartis> GetLateReturnContracts(DateTime? dateFrom, DateTime? dateTo)
+	/*public static List<LateContractsReport.Sutartis> GetLateReturnContracts(DateTime? dateFrom, DateTime? dateTo)
 	{
 		var query =
 			$@"SELECT
 				sut.nr,
-				sut.sutarties_data,
+				sut.automobilio_priemimo_data,
 				CONCAT(kln.vardas, ' ',kln.pavarde) as klientas,
 				sut.planuojama_grazinimo_data_laikas,
 				IF(
@@ -178,8 +172,8 @@ public class AtaskaitaRepo
 					OR IFNULL(sut.faktine_grazinimo_data_laikas, '0000-00-00') like '0000%'
 					AND DATEDIFF(NOW(), sut.planuojama_grazinimo_data_laikas) >=1
 				)
-				AND sut.sutarties_data >= IFNULL(?nuo, sut.sutarties_data)
-				AND sut.sutarties_data <= IFNULL(?iki, sut.sutarties_data)";
+				AND sut.automobilio_priemimo_data >= IFNULL(?nuo, sut.automobilio_priemimo_data)
+				AND sut.automobilio_priemimo_data <= IFNULL(?iki, sut.automobilio_priemimo_data)";
 
 		var drc =
 			Sql.Query(query, args => {
@@ -197,5 +191,5 @@ public class AtaskaitaRepo
 			});
 
 		return result;
-	}
+	}*/
 }

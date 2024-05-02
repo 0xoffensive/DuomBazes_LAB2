@@ -40,7 +40,6 @@
 				<th>@Html.DisplayNameFor(m => m.Sutartys[0].Nr)</th>
 				<th>@Html.DisplayNameFor(m => m.Sutartys[0].SutartiesData)</th>
 				<th>@Html.DisplayNameFor(m => m.Sutartys[0].Kaina)</th>
-				<th>@Html.DisplayNameFor(m => m.Sutartys[0].PaslauguKaina)</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -74,7 +73,6 @@
 						<td>#@Html.DisplayFor(m => Model.Sutartys[i].Nr)</td>
 						<td>@Html.DisplayFor(m => Model.Sutartys[i].SutartiesData)</td>
 						<td>@Html.DisplayFor(m => Model.Sutartys[i].Kaina)</td>
-						<td>@Html.DisplayFor(m => Model.Sutartys[i].PaslauguKaina)</td>
 					</tr>
 
 					@* group total *@
@@ -83,7 +81,6 @@
 						<tr>
 							<td colspan="2"></td>
 							<td><b>@Html.DisplayFor(m => Model.Sutartys[i].BendraSuma)</b></td>
-							<td><b>@Html.DisplayFor(m => Model.Sutartys[i].BendraSumaPaslaug)</b></td>
 						</tr>
 					}
 				}
@@ -97,9 +94,6 @@
 					<td colspan="2"></td>
 					<td>
 						@Html.DisplayFor(m => Model.VisoSumaSutartciu)
-					</td>
-					<td>
-						@Html.DisplayFor(m => Model.VisoSumaPaslaugu)
 					</td>
 				</tr>
 			}
