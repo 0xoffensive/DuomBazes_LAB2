@@ -82,7 +82,7 @@ public class AtaskaitaRepo
 		return result;
 	}
 
-	public static List<ContractsReport.Sutartis> GetContracts(DateTime? dateFrom, DateTime? dateTo)
+	public static List<ContractsReport.Sutartis> GetContracts(DateTime? dateFrom, DateTime? dateTo, string? klientasid)
 	{
 		var query =
 			$@"SELECT
@@ -146,6 +146,7 @@ public class AtaskaitaRepo
 			WHERE
 				sut.automobilio_priemimo_data >= IFNULL(?nuo, sut.automobilio_priemimo_data)
 				AND sut.automobilio_priemimo_data <= IFNULL(?iki, sut.automobilio_priemimo_data)
+				AND kln.asmens_kodas = IFNULL(?idfk, kln.asmens_kodas)
 			GROUP BY 
 				sut.nr, kln.asmens_kodas
 			ORDER BY 
@@ -155,6 +156,7 @@ public class AtaskaitaRepo
 			Sql.Query(query, args => {
 				args.Add("?nuo", dateFrom);
 				args.Add("?iki", dateTo);
+				args.Add("?idfk", klientasid);
 			});
 
 		var result = 
@@ -193,7 +195,9 @@ public class AtaskaitaRepo
 				AND (sut.remonto_busena = 'remontuojamas' OR sut.remonto_busena = 'priimtas laukia eileje')
 				AND DATEDIFF(sut.numatoma_suremontavimo_data, NOW()) <= 1
 				AND sut.automobilio_priemimo_data >= IFNULL(?nuo, sut.automobilio_priemimo_data)
-				AND sut.automobilio_priemimo_data <= IFNULL(?iki, sut.automobilio_priemimo_data)";
+				AND sut.automobilio_priemimo_data <= IFNULL(?iki, sut.automobilio_priemimo_data)
+			ORDER BY
+				sut.nr ASC";
 
 		var drc =
 			Sql.Query(query, args => {
@@ -211,4 +215,6 @@ public class AtaskaitaRepo
 
 		return result;
 	}
+	
+
 }

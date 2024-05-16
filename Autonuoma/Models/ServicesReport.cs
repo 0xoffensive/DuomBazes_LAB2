@@ -41,4 +41,5 @@ public class Report
 	public int VisoUzsakyta { get; set; }
 
 	public decimal BendraSuma { get; set; }
+	public IList<SelectListItem> Klientai { get; set; }
 }

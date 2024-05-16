@@ -1,6 +1,7 @@
 ﻿namespace Org.Ktu.Isk.P175B602.Autonuoma.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 using Org.Ktu.Isk.P175B602.Autonuoma.Repositories;
 
@@ -21,13 +22,29 @@ public class ReportsController : Controller
 	/// <param name="dateTo">Ending date. Can be null.</param>
 	/// <returns>Report view.</returns>
 	[HttpGet]
-	public ActionResult Contracts(DateTime? dateFrom, DateTime? dateTo)
+	public ActionResult Contracts(DateTime? dateFrom, DateTime? dateTo, string? klientasid)
 	{
 		var report = new ContractsReport.Report();
 		report.DateFrom = dateFrom;
 		report.DateTo = dateTo?.AddHours(23).AddMinutes(59).AddSeconds(59); //move time of end date to end of day
+		report.klientasid = klientasid;
 
-		report.Sutartys = AtaskaitaRepo.GetContracts(report.DateFrom, report.DateTo);
+		report.Sutartys = AtaskaitaRepo.GetContracts(report.DateFrom, report.DateTo, report.klientasid);
+
+		var klientai = KlientasRepo.List();
+
+		report.Klientai =
+			klientai
+				.Select(it =>
+				{
+					return
+						new SelectListItem
+						{
+							Value = it.AsmensKodas.ToString(),
+							Text = $"{it.Vardas} {it.Pavarde}"
+						};
+				})
+				.ToList();
 
 		foreach (var item in report.Sutartys)
 		{
@@ -55,4 +72,9 @@ public class ReportsController : Controller
 
 		return View(report);
 	}
+
+	/*private void PopulateLists(ContractsReport.Report rt)
+	{
+
+	}*/
 }

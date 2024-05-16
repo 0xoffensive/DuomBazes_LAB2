@@ -2,6 +2,7 @@
 
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 
 /// <summary>
@@ -49,9 +50,14 @@ public class Report
 	[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
 	public DateTime? DateTo { get; set; }
 
+	public string? klientasid { get; set; }
+
 	public List<Sutartis> Sutartys { get; set; }
 
 	public decimal VisoSumaSutartciu { get; set; }
 
 	public decimal VisoSumaDetaliu { get; set; }
+
+	public IList<SelectListItem> Klientai { get; set; }
+
 }
