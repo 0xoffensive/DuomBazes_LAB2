@@ -174,7 +174,7 @@ public class AtaskaitaRepo
 		return result;
 	}
 
-	public static List<LateContractsReport.Sutartis> GetLateReturnContracts(DateTime? dateFrom, DateTime? dateTo)
+	/*public static List<LateContractsReport.Sutartis> GetLateReturnContracts(DateTime? dateFrom, DateTime? dateTo)
 	{
 		var query =
 			$@"SELECT
@@ -208,5 +208,5 @@ public class AtaskaitaRepo
 			});
 
 		return result;
-	}
+	}*/
 }
