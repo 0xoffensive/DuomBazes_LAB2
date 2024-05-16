@@ -20,12 +20,9 @@ public class Sutartis
 	[DisplayName("Klientas")]
 	public string Klientas { get; set; }
 
-	[DisplayName("Planuota grąžinti")]
-	[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd hh:mm}")]
-	public DateTime PlanuojamaGrData { get; set; }
-
-	[DisplayName("Grąžinta")]
-	public string FaktineGrData { get; set; }
+	[DisplayName("Planuota sutaisyti")]
+	//[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd hh:mm}")]
+	public string PlanuojamaStData { get; set; }
 }
 
 /// <summary>

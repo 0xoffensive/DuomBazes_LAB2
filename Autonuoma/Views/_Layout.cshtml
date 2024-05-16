@@ -46,7 +46,7 @@
 		<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
 			<div class="container-fluid">
 				@* home button *@
-				<a class="navbar-brand" href="@Url.Action("Index", "Home")" class="navbar-brand"><i class="fa-solid fa-car"></i></a>
+				<a class="navbar-brand" href="@Url.Action("Index", "Home")" class="navbar-brand"><i class="fa-solid fa-bicycle"></i></a>
 
 				@* this buttons shows drop down menu on narrow screens; it is invisible normally *@
 				<button
@@ -98,12 +98,6 @@
 								</a>
 								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarReports">
 									@* report links go here *@
-									<li>
-										<a
-											href="@Url.Action("Services", "Reports")"
-											class="@MarkActive("Reports", "Services") dropdown-item"
-										>Paslaugų ataskaita</a>
-									</li>
 									<li>
 										<a
 											href="@Url.Action("Contracts", "Reports")"

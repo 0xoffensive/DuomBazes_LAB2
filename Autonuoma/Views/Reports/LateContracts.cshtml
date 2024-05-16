@@ -40,8 +40,7 @@
 				<th>@Html.DisplayNameFor(m => m.Sutartys[0].Nr)</th>
 				<th>@Html.DisplayNameFor(m => m.Sutartys[0].SutartiesData)</th>
 				<th>@Html.DisplayNameFor(m => m.Sutartys[0].Klientas)</th>
-				<th>@Html.DisplayNameFor(m => m.Sutartys[0].PlanuojamaGrData)</th>
-				<th>@Html.DisplayNameFor(m => m.Sutartys[0].FaktineGrData)</th>
+				<th>@Html.DisplayNameFor(m => m.Sutartys[0].PlanuojamaStData)</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -49,7 +48,7 @@
 			{
 				@* no data message *@
 				<tr class="no-data-msg">
-					<td colspan="5" align="center">Nurodytame laikotarpyje nebuvo vėluojančių gražinti automobilį sutarčių</td>
+					<td colspan="4" align="center">Nėra sudarytu sutarčių nurodytame laikotarpyje</td>
 				</tr>
 			}
 			else 
@@ -61,8 +60,7 @@
 						<td>#@Html.DisplayFor(m => item.Nr)</td>
 						<td>@Html.DisplayFor(m => item.SutartiesData)</td>
 						<td>@Html.DisplayFor(m => item.Klientas)</td>
-						<td>@Html.DisplayFor(m => item.PlanuojamaGrData)</td>
-						<td>@Html.DisplayFor(m => item.FaktineGrData)</td>
+						<td>@Html.DisplayFor(m => item.PlanuojamaStData)</td>
 					</tr>
 				}
 			}

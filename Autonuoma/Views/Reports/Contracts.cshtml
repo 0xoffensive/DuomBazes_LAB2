@@ -40,7 +40,8 @@
 				<th>@Html.DisplayNameFor(m => m.Sutartys[0].Nr)</th>
 				<th>@Html.DisplayNameFor(m => m.Sutartys[0].SutartiesData)</th>
 				<th>@Html.DisplayNameFor(m => m.Sutartys[0].Kaina)</th>
-				<th>@Html.DisplayNameFor(m => m.Sutartys[0].PaslauguKaina)</th>
+				<th>@Html.DisplayNameFor(m => m.Sutartys[0].DetaliuKaina)</th>
+				<th>@Html.DisplayNameFor(m => m.Sutartys[0].Busena)</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -48,7 +49,7 @@
 			{
 				@* no data message *@
 				<tr class="no-data-msg">
-					<td colspan="4" align="center">Nurodytame laikotarpyje nebuvo sudaryta sutarčių</td>
+					<td colspan="5" align="center">Nėra sudarytu sutarčių nurodytame laikotarpyje</td>
 				</tr>
 			}
 			else 
@@ -61,7 +62,7 @@
 					{
 						<tr class="group-header">
 							<td 
-								colspan="4" 
+								colspan="5" 
 								align="center"
 							>
 								<b>@Html.DisplayFor(m => Model.Sutartys[i].Vardas) @Html.DisplayFor(m => Model.Sutartys[i].Pavarde)</b>
@@ -74,7 +75,8 @@
 						<td>#@Html.DisplayFor(m => Model.Sutartys[i].Nr)</td>
 						<td>@Html.DisplayFor(m => Model.Sutartys[i].SutartiesData)</td>
 						<td>@Html.DisplayFor(m => Model.Sutartys[i].Kaina)</td>
-						<td>@Html.DisplayFor(m => Model.Sutartys[i].PaslauguKaina)</td>
+						<td>@Html.DisplayFor(m => Model.Sutartys[i].DetaliuKaina)</td>
+						<td>@Html.DisplayFor(m => Model.Sutartys[i].Busena)</td>
 					</tr>
 
 					@* group total *@
@@ -83,14 +85,15 @@
 						<tr>
 							<td colspan="2"></td>
 							<td><b>@Html.DisplayFor(m => Model.Sutartys[i].BendraSuma)</b></td>
-							<td><b>@Html.DisplayFor(m => Model.Sutartys[i].BendraSumaPaslaug)</b></td>
+							<td><b>@Html.DisplayFor(m => Model.Sutartys[i].BendraSumaDetaliu)</b></td>
+							<td></td>
 						</tr>
 					}
 				}
 
 				@* grand total *@
 				<tr class="grand-total-header">
-					<td colspan="4" align="center"><b>Viso</b></td>
+					<td colspan="5" align="center"><b>Viso</b></td>
 				</tr>
 
 				<tr>
@@ -99,8 +102,9 @@
 						@Html.DisplayFor(m => Model.VisoSumaSutartciu)
 					</td>
 					<td>
-						@Html.DisplayFor(m => Model.VisoSumaPaslaugu)
+						@Html.DisplayFor(m => Model.VisoSumaDetaliu)
 					</td>
+					<td></td>
 				</tr>
 			}
 		</tbody>

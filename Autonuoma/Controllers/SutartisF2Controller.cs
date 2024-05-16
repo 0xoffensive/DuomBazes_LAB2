@@ -186,16 +186,6 @@ public class SutartisF2Controller : Controller
 				}
 			}
 
-			// ?!?! ar tikrinti?
-			/*List<SutartisCE.AtlDarb> darb = new List<SutartisCE.AtlDarb>();
-			foreach (var item in sutCE.AtliktiDarbai)
-			{
-				if (darb.Any(x => x.DetaleId == item.DetaleId))
-					ModelState.AddModelError($"item.DetaleId", "Dublikuojasi detalė.");
-					
-				darb.Add(item);
-			}*/
-
 			//form field validation passed?
 			if( ModelState.IsValid )
 			{

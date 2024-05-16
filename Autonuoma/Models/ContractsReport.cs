@@ -22,15 +22,18 @@ public class Sutartis
 
 	public string AsmensKodas { get; set; }
 
-	[DisplayName("Sudarytų sutarčių vertė")]
+	[DisplayName("Sutarties būsena")]
+	public string Busena { get; set; }
+
+	[DisplayName("Sutarčių vertė")]
 	public decimal Kaina { get; set; }
 
-	[DisplayName("Užsakytų paslaugų vertė")]
-	public decimal PaslauguKaina { get; set; }
+	[DisplayName("Detalių kainos")]
+	public decimal DetaliuKaina { get; set; }
 
 	public decimal BendraSuma { get; set; }
 
-	public decimal BendraSumaPaslaug { get; set; }
+	public decimal BendraSumaDetaliu { get; set; }
 }
 
 /// <summary>
@@ -50,5 +53,5 @@ public class Report
 
 	public decimal VisoSumaSutartciu { get; set; }
 
-	public decimal VisoSumaPaslaugu { get; set; }
+	public decimal VisoSumaDetaliu { get; set; }
 }
