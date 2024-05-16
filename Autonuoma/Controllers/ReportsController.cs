@@ -51,7 +51,7 @@ public class ReportsController : Controller
 		report.DateFrom = dateFrom;
 		report.DateTo = dateTo?.AddHours(23).AddMinutes(59).AddSeconds(59); //move time of end date to end of day
 
-		//report.Sutartys = AtaskaitaRepo.GetLateReturnContracts(report.DateFrom, report.DateTo);
+		report.Sutartys = AtaskaitaRepo.GetLateReturnContracts(report.DateFrom, report.DateTo);
 
 		return View(report);
 	}

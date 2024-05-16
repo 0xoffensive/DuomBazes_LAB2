@@ -174,12 +174,13 @@ public class AtaskaitaRepo
 		return result;
 	}
 
-	/*public static List<LateContractsReport.Sutartis> GetLateReturnContracts(DateTime? dateFrom, DateTime? dateTo)
+	public static List<LateContractsReport.Sutartis> GetLateReturnContracts(DateTime? dateFrom, DateTime? dateTo)
 	{
 		var query =
 			$@"SELECT
 				sut.nr,
 				sut.automobilio_priemimo_data,
+				sut.remonto_busena,
 				sut.numatoma_suremontavimo_data as plandata,
 				CONCAT(kln.vardas, ' ',kln.pavarde) as klientas,
 				CASE
@@ -189,6 +190,7 @@ public class AtaskaitaRepo
 			FROM `remonto_sutartis` sut, `klientas` kln
 			WHERE
 				kln.asmens_kodas = sut.fk_KLIENTASasmens_kodas
+				AND (sut.remonto_busena = 'remontuojamas' OR sut.remonto_busena = 'priimtas laukia eileje')
 				AND DATEDIFF(sut.numatoma_suremontavimo_data, NOW()) <= 1
 				AND sut.automobilio_priemimo_data >= IFNULL(?nuo, sut.automobilio_priemimo_data)
 				AND sut.automobilio_priemimo_data <= IFNULL(?iki, sut.automobilio_priemimo_data)";
@@ -208,5 +210,5 @@ public class AtaskaitaRepo
 			});
 
 		return result;
-	}*/
+	}
 }
