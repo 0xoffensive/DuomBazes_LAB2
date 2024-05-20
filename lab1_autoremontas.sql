@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2024 at 09:18 AM
+-- Generation Time: May 20, 2024 at 08:10 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,14 +43,16 @@ INSERT INTO `aptarnauja` (`fk_REMONTO_SUTARTISnr`, `fk_MECHANIKAStabelio_nr`) VA
 (10015, 102),
 (10015, 103),
 (10017, 100),
-(10018, 101),
 (10019, 102),
 (10020, 103),
 (10021, 105),
 (10026, 102),
 (10030, 101),
 (10031, 103),
-(10032, 103);
+(10032, 102),
+(10032, 103),
+(10034, 103),
+(10035, 103);
 
 -- --------------------------------------------------------
 
@@ -72,17 +74,21 @@ CREATE TABLE `atliktas_darbas` (
 --
 
 INSERT INTO `atliktas_darbas` (`darbo_pavadinimas`, `darbo_kaina`, `bendra_kaina`, `nuvaziuota`, `ID_`, `fk_REMONTO_SUTARTISnr`) VALUES
-('Pakeistos zvakes, generatorius', 160, 190.00, 69, 8, 10017),
 ('Pakeista variklio grandinė', 300, 507.95, 140, 9, 10014),
-('Engine repair', 200, 200.00, 50, 15, 10017),
-('Brake replacement', 150, 150.00, 30, 16, 10018),
 ('Oil change', 50, 50.00, 10, 17, 10019),
 ('Suspension check', 100, 100.00, 20, 18, 10020),
 ('Electrical system diagnostics', 120, 120.00, 25, 19, 10021),
-('asf', 10, 74.00, 0, 53, 10031),
 ('pakesita', 15, 196.00, 0, 54, 10022),
 ('Pakeistas Obadas', 80, 261.00, 116, 55, 10029),
-('pk', 60, 240.00, 20, 95, 10026);
+('pk', 60, 240.00, 20, 95, 10026),
+('sw', 12, 112.00, 14, 109, 10032),
+('asf', 10, 74.00, 0, 110, 10031),
+('Pakeistos zvakes, generatorius', 160, 179.96, 69, 111, 10017),
+('Pakeistos zvakes, generatorius', 160, 210.60, 69, 112, 10017),
+('Pakeistos zvakes, generatorius', 160, 321.02, 69, 113, 10017),
+('Pakeistos zvakes, generatorius', 160, 190.00, 69, 114, 10017),
+('niekas', 21, 86.75, 15, 118, 10034),
+('Pakeistas Obadas', 10, 1010.00, 10, 119, 10035);
 
 --
 -- Triggers `atliktas_darbas`
@@ -255,15 +261,18 @@ CREATE TABLE `detales_kiekis` (
 --
 
 INSERT INTO `detales_kiekis` (`kiekis`, `bendra_kaina`, `ID_`, `fk_DETALEID_`, `fk_ATLIKTAS_DARBASID_`) VALUES
-(4, 19.96, 5, 3, 8),
-(1, 50.60, 6, 12, 8),
 (1, 207.95, 7, 7, 9),
-(2, 161.02, 28, 1, 8),
-(2, 30.00, 41, 9, 8),
-(1, 64.00, 72, 21, 53),
 (1, 181.00, 73, 16, 54),
 (1, 181.00, 74, 16, 55),
-(2, 180.00, 114, 10, 95);
+(2, 180.00, 114, 10, 95),
+(2, 100.00, 128, 34, 109),
+(1, 64.00, 129, 21, 110),
+(4, 19.96, 130, 3, 111),
+(1, 50.60, 131, 12, 112),
+(2, 161.02, 132, 1, 113),
+(2, 30.00, 133, 9, 114),
+(1, 65.75, 137, 4, 118),
+(1, 1000.00, 138, 17, 119);
 
 --
 -- Triggers `detales_kiekis`
@@ -561,18 +570,19 @@ CREATE TABLE `remonto_sutartis` (
 INSERT INTO `remonto_sutartis` (`fk_AUTOMOBILISvin`, `automobilio_priemimo_data`, `nr`, `numatoma_suremontavimo_data`, `galutine_rida`, `pradine_rida`, `remonto_kaina`, `remonto_busena`, `fk_KLIENTASasmens_kodas`, `fk_DARBUOTOJAStabelio_nr`) VALUES
 ('WBA3B9G56ENR90821', '2024-03-09', 10014, NULL, 50140, 50000, 507.95, 'atsiskaityta', '88888888888', 102),
 ('WBA3B9G56ENR90821', '2024-03-04', 10015, '2024-03-30', 145675, 145675, 0.00, 'atsiskaityta', '88888888888', 104),
-('WBA3B9G56ENR90821', '2024-03-06', 10017, NULL, 1119, 1000, 190.00, 'suremontuotas', '98765432109', 102),
-('YS2R4X20005399401', '2024-03-07', 10018, '2024-03-08', 50030, 50000, 150.00, 'suremontuotas', '12345678901', 100),
+('WBA3B9G56ENR90821', '2024-03-06', 10017, '0001-01-01', 1276, 1000, 711.58, 'remontuojamas', '98765432109', 102),
 ('YS2R4X20005399402', '2024-03-08', 10019, '2024-03-09', 60010, 60000, 50.00, 'suremontuotas', '23456789012', 101),
 ('YS2R4X20005399403', '2024-03-09', 10020, '2024-03-10', 70020, 70000, 100.00, 'suremontuotas', '34567890123', 102),
 ('YS2R4X20005399404', '2024-03-10', 10021, '2024-03-11', 80025, 80000, 120.00, 'suremontuotas', '45678901234', 103),
 ('YS2R4X20005399405', '2024-03-11', 10022, '2024-03-12', 90000, 90000, 196.00, 'remontuojamas', '56789012345', 104),
-('OPELZOPEL', '2024-04-24', 10023, '2024-05-24', 200000, 200000, NULL, 'remontuojamas', '13579246810', 102),
+('OPELZOPEL', '2024-04-24', 10023, '2024-05-24', 200000, 200000, 0.00, 'remontuojamas', '13579246810', 102),
 ('YS2R4X20005399402', '2024-04-24', 10026, '2024-04-11', 620, 600, 240.00, 'remontuojamas', '13579246810', 100),
 ('YS2R4X20005399403', '2024-04-24', 10029, '0001-01-01', 89116, 89000, 261.00, 'remontuojamas', '03579246801', 102),
 ('WAUZZZ8K9BA011234', '2024-04-24', 10030, '0001-01-01', 160, 160, 0.00, 'remontuojamas', '24680135792', 102),
 ('OPELZOPEL', '2024-04-24', 10031, '0001-01-01', 148424, 148424, 74.00, 'remontuojamas', '12345678901', 100),
-('2HGFG3B56FH503743', '2024-04-12', 10032, '1901-08-01', 16600, 16600, 0.00, 'remontuojamas', '13579246810', 101);
+('2HGFG3B56FH503743', '2024-04-12', 10032, '1901-08-01', 16614, 16600, 112.00, 'remontuojamas', '13579246810', 101),
+('JM1CW2BL0E0112345', '2024-05-16', 10034, '2024-07-23', 30, 15, 15623.00, 'remontuojamas', '01234567890', 100),
+('1G1FB1RX8G0123456', '2024-05-16', 10035, '2024-07-23', 25, 15, NULL, 'remontuojamas', '13579246810', 101);
 
 --
 -- Triggers `remonto_sutartis`
@@ -605,7 +615,6 @@ CREATE TABLE `saskaita` (
 INSERT INTO `saskaita` (`nr`, `data`, `busena`, `liko`, `fk_REMONTO_SUTARTISnr`) VALUES
 (1003, '2024-03-04', 'sumoketa', -512.05, 10014),
 (1004, '2024-03-09', 'nesumoketa', 190.00, 10017),
-(1005, '2024-03-10', 'nesumoketa', 150.00, 10018),
 (1006, '2024-03-11', 'nesumoketa', 50.00, 10019),
 (1007, '2024-03-12', 'nesumoketa', 100.00, 10020),
 (1008, '2024-03-13', 'nesumoketa', 120.00, 10021);
@@ -676,13 +685,16 @@ INSERT INTO `turi` (`fk_REMONTO_SUTARTISnr`, `fk_GEDIMASID_`) VALUES
 (10015, 4),
 (10017, 3),
 (10017, 25),
-(10018, 26),
 (10019, 27),
 (10020, 28),
 (10021, 29),
 (10026, 29),
+(10031, 27),
 (10031, 31),
-(10032, 21);
+(10031, 32),
+(10032, 21),
+(10034, 31),
+(10035, 32);
 
 --
 -- Indexes for dumped tables
@@ -807,7 +819,7 @@ ALTER TABLE `turi`
 -- AUTO_INCREMENT for table `atliktas_darbas`
 --
 ALTER TABLE `atliktas_darbas`
-  MODIFY `ID_` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `ID_` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 
 --
 -- AUTO_INCREMENT for table `darbuotojas`
@@ -825,7 +837,7 @@ ALTER TABLE `detale`
 -- AUTO_INCREMENT for table `detales_kiekis`
 --
 ALTER TABLE `detales_kiekis`
-  MODIFY `ID_` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `ID_` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 
 --
 -- AUTO_INCREMENT for table `gamintojas`
@@ -861,7 +873,7 @@ ALTER TABLE `mokejimas`
 -- AUTO_INCREMENT for table `remonto_sutartis`
 --
 ALTER TABLE `remonto_sutartis`
-  MODIFY `nr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10033;
+  MODIFY `nr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10036;
 
 --
 -- AUTO_INCREMENT for table `saskaita`
